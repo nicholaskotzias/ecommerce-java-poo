@@ -1,8 +1,7 @@
 package com.nicholaskotzias.models;
+
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-
-
 
 public class Carrinho {
     private ArrayList<Produto> produtos;
@@ -67,6 +66,4 @@ public class Carrinho {
     public void setFinalizadoEm(LocalDateTime finalizadoEm) {
         this.finalizadoEm = finalizadoEm;
     }
-    
-    
 }  
