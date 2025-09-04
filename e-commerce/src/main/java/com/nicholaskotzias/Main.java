@@ -1,13 +1,10 @@
 package com.nicholaskotzias;
 
-import com.nicholaskotzias.models.Produto;
 import io.javalin.Javalin;
-import java.util.ArrayList;
-
-
 
 public class Main {
-    public static ArrayList<Produto> bdProdutos;
+    // public static ArrayList<Produto> bdProdutos;
+
     public static void main(String[] args) {
         System.out.println("Hello world!");
 
