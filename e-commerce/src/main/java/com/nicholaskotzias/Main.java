@@ -1,6 +1,7 @@
 package com.nicholaskotzias;
 
 import io.javalin.Javalin;
+import io.javalin.http.staticfiles.Location;
 
 public class Main {
     // public static ArrayList<Produto> bdProdutos;
@@ -8,8 +9,15 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
 
-        Javalin app = Javalin.create().start(7070);
+        Javalin app = Javalin.create(config -> {
+            config.staticFiles.add(staticFiles -> {
+                staticFiles.directory = "/public";
+                staticFiles.location = Location.CLASSPATH;
+            });
+        }).start(7070);
 
-        app.get("/tads24", ctx -> ctx.result("TADS24 EH TOP"));
+        app.get("/", ctx -> {
+            ctx.render("index.html");
+        });
     }
 }
