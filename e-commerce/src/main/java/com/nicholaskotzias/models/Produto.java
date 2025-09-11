@@ -5,7 +5,7 @@ public class Produto {
     private Double preco;
     private Integer estoque;
 
-    public Produto(String nome, Double preco, Integer estoque) {
+    public Produto(String nome, Double preco) {
         this.nome = nome;
         this.preco = preco;
         this.estoque = 0;
